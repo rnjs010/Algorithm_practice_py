@@ -1,20 +1,20 @@
 # 정렬된 배열에서 특정 수의 개수 구하기 - 라이브러리 활용 (Zoho 면접)
-# from bisect import bisect_left, bisect_right
+from bisect import bisect_left, bisect_right
 
-# def count(arr, l_value, r_value):
-#     l_ind = bisect_left(arr, l_value)
-#     r_ind = bisect_right(arr, r_value)
-#     return r_ind - l_ind
+def count(arr, l_value, r_value):
+    l_ind = bisect_left(arr, l_value)
+    r_ind = bisect_right(arr, r_value)
+    return r_ind - l_ind
 
-# n, x = map(int, input().split())
-# li = list(map(int, input().split()))
+n, x = map(int, input().split())
+li = list(map(int, input().split()))
 
-# result = count(li, x, x)
+result = count(li, x, x)
 
-# if result == 0:
-#     print(-1)
-# else:
-#     print(result)
+if result == 0:
+    print(-1)
+else:
+    print(result)
 
 # 다른 방법 - (이진 탐색)
 def count_value(arr, n, x):
